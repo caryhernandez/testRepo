@@ -79,7 +79,6 @@ ls()
 
 
 
-
 ### Help Resources
 
 
@@ -109,7 +108,8 @@ AugmentedData <- read.csv(file=paste(filelocation,startdate,end,enddate,forstrin
 AugmentedData2 <- read.csv(file=paste("C:/Users/chernandez/Downloads/third_party_automated_data_new_start_",startdate,"_end_",enddate,"_for_",dataname_end,sep=""))
 
 summary(AugmentedData)
-
+head(AugmentedData)
+# Added Head
 
 
 
