@@ -70,21 +70,50 @@ numeric_vector <- c()
 char_vec <- c("")
 
 
-
-
-
-
-
-
-
-
-
-
 ls()
 # Displays all variables & data.frames available for use that you have created
 
-# Using variables within a function
-dataname_end <- "chernandez@quantcast.com.csv"
-startdate <- "2016-03-15"
-enddate <- "2016-03-16"
+
+
+
+
+
+
+
+### Help Resources
+
+
+# Question Mark ?function() 
+
+?median
+?read.csv
+
+# Stack Overflow
+
+
+
+
+
+# Example Using variables within a function
+# Pull Augmented Data from downloads folder given date range you pulled for 
+startdate <- "2016-04-11"
+enddate <- "2016-04-11"
+
+  filelocation <- "C:/Users/chernandez/Downloads/third_party_automated_data_new_start_"
+  end = "_end_"
+  forstring = "_for_"
+  dataname_end <- "chernandez@quantcast.com.csv"
+  
+AugmentedData <- read.csv(file=paste(filelocation,startdate,end,enddate,forstring,dataname_end,sep=""))
+
 AugmentedData2 <- read.csv(file=paste("C:/Users/chernandez/Downloads/third_party_automated_data_new_start_",startdate,"_end_",enddate,"_for_",dataname_end,sep=""))
+
+
+
+
+
+
+
+
+
+
