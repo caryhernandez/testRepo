@@ -74,20 +74,12 @@ ls()
 # Displays all variables & data.frames available for use that you have created
 
 
+### Give example of pulling in Measure Data downloaded. 
+# We will have to use the parameter skip. This tells how many rows to skip before beginning to read in data. 
+install.packages(gdata)
+library(gdata)
 
-
-
-
-
-### Help Resources
-
-
-# Question Mark ?function() 
-
-?median
-?read.csv
-
-# Stack Overflow
+Measure_Bonobos <- read.xls(file="C:/Users/chernandez/Downloads/_fp.event.Checkout+Confirmation.xls",skip=3)
 
 
 
@@ -105,12 +97,22 @@ enddate <- "2016-04-11"
   
 AugmentedData <- read.csv(file=paste(filelocation,startdate,end,enddate,forstring,dataname_end,sep=""))
 
-AugmentedData2 <- read.csv(file=paste("C:/Users/chernandez/Downloads/third_party_automated_data_new_start_",startdate,"_end_",enddate,"_for_",dataname_end,sep=""))
+AugmentedData2 <- read.csv(file="C:/Users/chernandez/Downloads/third_party_automated_data_new_start_2016-04-11_end_2016-04-11_for_chernandez@quantcast.com.csv")
+# The two above lines pull the same file to AugmentedData and AugmentedData2
+# The first method could be helpful to clean up the method in writing a dataset you will pull often
+# And you can easily change the date ranges and the file's location for better readability 
 
-summary(AugmentedData)
-head(AugmentedData)
-# Added Head
 
+
+### Help Resources ###
+
+
+# Question Mark ?function() 
+
+?median
+?read.csv
+
+# Stack Overflow
 
 
 
