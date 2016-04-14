@@ -99,13 +99,22 @@ Augmentdata$CPA
 ### Give example of pulling in Measure Data downloaded. 
 # We will have to use the parameter skip. This tells how many rows to skip before beginning to read in data. 
 
-Measure_Bonobos <- read.csv(file="C:/Users/chernandez/Downloads/_fp.event.Checkout+Confirmation.csv",skip=3)
+Measure_Homeserve <- read.csv(file="C:/Users/chernandez/Downloads/_fp.event.Checkout+Confirmation.csv",skip=3)
 
 
+Measure_Homeserve
+head(Measure_Homeserve)
+str(Measure_Homeserve)
+summary(Measure_Homeserve)
 
+## Note to team #### - When you load in Measure data, it reads in many numeric/integer variables as factors. 
 
-
-
+### Transforms the variables that are read in as factors and changes them to be numerics. 
+### This will help us make graphics and also apply functions such as mean() to them successfully. 
+Measure_Homeserve$Page.views <- as.numeric(Measure_Homeserve$Page.views)
+Measure_Homeserve$Visits <- as.numeric(Measure_Homeserve$Visits)
+Measure_Homeserve$Uniques <- as.numeric(Measure_Homeserve$Uniques)
+Measure_Homeserve$Page.views.per.Person <- as.numeric(Measure_Homeserve$Page.views.per.Person)
 
 
 
